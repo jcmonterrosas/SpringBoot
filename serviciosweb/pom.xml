@@ -80,7 +80,7 @@
 				</executions>
 				<configuration>
 					<sources>
-						<source>src\main\resources\Usuarios.xsd</source>
+						<source>src\main\resources\Users.xsd</source>
 					</sources>
 				</configuration>
 			</plugin>

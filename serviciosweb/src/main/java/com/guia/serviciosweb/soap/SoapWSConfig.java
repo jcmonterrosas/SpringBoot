@@ -30,14 +30,14 @@ public class SoapWSConfig extends WsConfigurerAdapter {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("UsuariosPort");
         wsdl11Definition.setLocationUri("/ws");
-        wsdl11Definition.setTargetNamespace(UsuariosEndpoint.NAMESPACE_URI);
+        wsdl11Definition.setTargetNamespace(UsersEndpoint.NAMESPACE_URI);
         wsdl11Definition.setSchema(schema);
         return wsdl11Definition;
     }
 
     @Bean
     public XsdSchema usuariosSchema(){
-        return new SimpleXsdSchema(new ClassPathResource("Usuarios.xsd"));
+        return new SimpleXsdSchema(new ClassPathResource("Users.xsd"));
     }
 
 }
