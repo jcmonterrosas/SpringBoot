@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  guia:
+    container_name: guia
+    build: .
+    image: guia
+    restart: always
+    ports:
+    - 8080:8080
+    environment:
+    - GUIA_DB_PASSWORD
+    - GUIA_DB_DNS
+    - GUIA_DB_USER
+    - GUIA_DB_NAME
+    depends_on:
+    - guia_db
+
+  guia_db:
+    container_name: guia-db
+    image: postgres
+    restart: always
+    ports:
+    - 5432:5432
+    environment:
+    - PGDATA=/var/lib/postgresql/data/pgdata
+    - POSTGRES_PASSWORD=${GUIA_DB_PASSWORD}
+    - POSTGRES_USER=${GUIA_DB_USER}
+    - POSTGRES_PORT=5432
+    - POSTGRES_DB=${GUIA_DB_NAME}

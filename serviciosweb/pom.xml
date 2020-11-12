@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.guia</groupId>
 	<artifactId>serviciosweb</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1</version>
 	<name>serviciosweb</name>
 	<description>Servicios web - SOAP y REST desarrollados para el diplomado de interoperabilidad con XRoad</description>
 
@@ -80,7 +80,7 @@
 				</executions>
 				<configuration>
 					<sources>
-						<source>src\main\resources\Users.xsd</source>
+						<source>src/main/resources/Users.xsd</source>
 					</sources>
 				</configuration>
 			</plugin>
